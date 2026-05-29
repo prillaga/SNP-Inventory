@@ -1,81 +1,73 @@
-# Santillan Native Products — POS Inventory (GitHub Pages)
+<p align="center">
+  <a href="https://github.com/lucide-icons/lucide">
+    <img src="https://lucide.dev/package-logos/lucide-react.svg" alt="Lucide icon library for React applications." width="540">
+  </a>
+</p>
 
-Static, **offline-first** point-of-sale and inventory dashboard. No login, no backend, no database setup.
+<p align="center">
+Lucide icon library for React applications.
+</p>
 
-- All data stored in **browser localStorage** (auto-saves on every change)
-- Works completely **offline** after first load
-- **Export / Import JSON** to move data between devices manually
-- Deploy to **GitHub Pages** with included workflow
+<div align="center">
 
-## Features
+  [![npm](https://img.shields.io/npm/v/lucide-react?color=blue)](https://www.npmjs.com/package/lucide-react)
+  ![NPM Downloads](https://img.shields.io/npm/dw/lucide-react)
+  [![GitHub](https://img.shields.io/github/license/lucide-icons/lucide)](https://lucide.dev/license)
+</div>
 
-- **Dashboard** — Total products, daily revenue, products sold, orders today, daily profit
-- **Products** — Browse inventory with search and categories
-- **Add Sale** — Cart and checkout (stock updates on checkout only)
-- **Sales History** — Transaction log with profit
-- **Add Product** — Full inventory management (add, edit, delete, stock +/-, images)
-- **Customers & Expenses** — Local CRUD
-- **Reports** — Sales summary and stock alerts
-- **Settings** — Store name, export JSON, export CSV, import backup
+<p align="center">
+  <a href="https://lucide.dev/guide/">About</a>
+  ·
+  <a href="https://lucide.dev/icons/">Icons</a>
+  ·
+  <a href="https://lucide.dev/guide/packages/lucide-react">Documentation</a>
+  ·
+  <a href="https://lucide.dev/license">License</a>
+</p>
 
-## Run locally
+# Lucide React
 
-```bash
-cd santillan-pos
-bash build.sh
-bash serve.sh
+Implementation of the lucide icon library for React applications.
+
+## Installation
+
+```sh
+pnpm add lucide-react
 ```
 
-Open http://localhost:8080/index.html
-
-Or with Vite dev server:
-
-```bash
-npm install
-npm run dev
+```sh
+npm install lucide-react
 ```
 
-## Deploy to GitHub Pages
-
-1. Push this folder to a GitHub repository
-2. Go to **Settings → Pages → Build and deployment**
-3. Source: **GitHub Actions** (not “Deploy from a branch”)
-4. Push to `main` or `master` — workflow `.github/workflows/deploy.yml` builds and publishes the site
-
-Your site URL: `https://<username>.github.io/<repo-name>/`
-
-If deploy fails in Actions, open the failed run log. Common fixes:
-
-- **Build job**: needs Linux-compatible `build.sh` (included) — do not commit `.tools/` (macOS binaries)
-- **Deploy job**: Pages source must be **GitHub Actions**; first deploy creates the `github-pages` environment
-- **Blank site**: hard-refresh; confirm `dist/bundle.js` exists in the workflow artifact (`_site` folder)
-
-## Data & sync
-
-| Action | How |
-|--------|-----|
-| Auto-save | Every change writes to `localStorage` key `santillan-pos-data-v1` |
-| Backup | Settings → **Export Data (JSON)** |
-| Restore | Settings → **Import Data** |
-| Inventory CSV | Settings → **Export Inventory (CSV)** |
-| Other device | Export on device A → transfer file → Import on device B |
-
-GitHub Pages cannot sync live data between devices without a backend. For real-time multi-device sync, add Supabase or Firebase later.
-
-## Project structure
-
-```
-index.html          # Entry (loads dist/bundle.js)
-dist/bundle.js      # Built app (run build.sh after src changes)
-assets/             # Product images & logo
-src/                # React source
-legacy/             # Old vanilla HTML app
+```sh
+yarn add lucide-react
 ```
 
-## Rebuild after editing source
-
-```bash
-bash build.sh
+```sh
+bun add lucide-react
 ```
 
-Then hard-refresh the browser (Cmd+Shift+R).
+## Documentation
+
+For full documentation, visit [lucide.dev](https://lucide.dev/guide/packages/lucide-react)
+
+## Community
+
+Join the [Discord server](https://discord.gg/EH6nSts) to chat with the maintainers and other users.
+
+## License
+
+Lucide is licensed under the ISC license. See [LICENSE](https://lucide.dev/license).
+
+## Sponsors
+
+<a href="https://vercel.com?utm_source=lucide&utm_campaign=oss">
+  <img src="https://lucide.dev/vercel.svg" alt="Powered by Vercel" width="200" />
+</a>
+
+<a href="https://www.digitalocean.com/?refcode=b0877a2caebd&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://lucide.dev/digitalocean.svg" width="200" alt="DigitalOcean Referral Badge" /></a>
+
+### Awesome backers 🍺
+
+<a href="https://www.scipress.io?utm_source=lucide"><img src="https://lucide.dev/sponsors/scipress.svg" width="180" alt="Scipress sponsor badge" /></a>
+<a href="https://github.com/pdfme/pdfme"><img src="https://lucide.dev/sponsors/pdfme.svg" width="180" alt="pdfme sponsor badge" /></a>
