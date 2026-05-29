@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santillan Native Products POS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header header-with-image">
+    <h1>Santillan Native Products POS</h1>
+    <p>Simple Point of Sale System</p>
+  </header>
+
+  <main class="layout">
+    <section class="card products">
+      <h2>Products</h2>
+      <div id="product-list" class="product-list"></div>
+    </section>
+
+    <section class="card cart">
+      <h2>Current Sale</h2>
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="totals">
+        <div><span>Subtotal</span><strong id="subtotal">PHP 0.00</strong></div>
+        <div><span>Tax (12%)</span><strong id="tax">PHP 0.00</strong></div>
+        <div class="grand"><span>Total</span><strong id="total">PHP 0.00</strong></div>
+      </div>
+
+      <form id="checkout-form" class="checkout">
+        <label for="cash">Cash Received (PHP)</label>
+        <input id="cash" name="cash" type="number" min="0" step="0.01" placeholder="0.00" required />
+        <button type="submit">Complete Sale</button>
+      </form>
+
+      <div id="receipt" class="receipt hidden"></div>
+    </section>
+
+    <section class="card sales">
+      <h2>Sales Today</h2>
+      <div class="sales-summary">
+        <p>Transactions: <strong id="txn-count">0</strong></p>
+        <p>Total Revenue: <strong id="daily-revenue">PHP 0.00</strong></p>
+      </div>
+      <ul id="sales-log" class="sales-log"></ul>
+    </section>
+
+    <section class="card portfolio">
+      <h2>Product Portfolio</h2>
+      <p class="portfolio-note">Preview product pictures for customers.</p>
+      <div id="portfolio-list" class="portfolio-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
